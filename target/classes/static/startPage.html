@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SSHClient</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body onload="loadSelects()">
+<h1>SSHClient</h1>
+<form>
+    <select style="font-size:20px;" id="form"></select><br><br>
+    <p style="font-size:20px;">Password:<input style="font-size:20px;" id="password" type="text" name="password" ></p><br><br>
+    <input style="font-size:20px;" type="button" value="Connect" name="Submit" onclick= "connect()">
+    <input style="font-size:20px;" type="button" id="terminal" onclick ="location.href='http://localhost:8080/terminal';" value="Show terminal" /><br><br>
+</form>
+<input style="font-size:20px;" type="button" onclick="location.href='http://localhost:8080/createAccountPage';" value="Create account" />
+
+</body>
+<script src="startPage.js"></script>
+
+</html>

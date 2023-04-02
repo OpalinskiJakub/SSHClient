@@ -1,4 +1,4 @@
-const socket = new WebSocket("ws://localhost:8080/index");
+const socket = new WebSocket("ws://localhost:8080/name");
 
 var terminal = new Terminal()
 terminal.open(document.getElementById("terminal"));

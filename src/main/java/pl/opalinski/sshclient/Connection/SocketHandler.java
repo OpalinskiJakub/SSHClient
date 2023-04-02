@@ -1,18 +1,24 @@
-package pl.opalinski.sshclient.WebSocket;
+package pl.opalinski.sshclient.Connection;
 
-import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.JSchException;
+import org.springframework.stereotype.Component;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
-import java.io.*;
-import java.nio.charset.Charset;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 
+@Component
 public class SocketHandler extends TextWebSocketHandler {
 
-    private SSHConnector shell = new SSHConnector();
+    private final SSHConnector shell;
+
+    public SocketHandler(SSHConnector shell) {
+        this.shell = shell;
+    }
 
     @Override
     public void handleTextMessage(WebSocketSession session, TextMessage message)
@@ -32,18 +38,18 @@ public class SocketHandler extends TextWebSocketHandler {
             @Override
             public void run() {
                 byte[] response = new byte[1024];
-                try{
+                try {
                     InputStream in = shell.getSShConnectionInputStream();
 
-                    while (true){
-                        while (in.available()>0) {
+                    while (true) {
+                        while (in.available() > 0) {
                             int i = in.read(response, 0, 1024);
                             TextMessage preparedResponse = new TextMessage(new String(response, 0, i));
                             session.sendMessage(preparedResponse);
                         }
 
                     }
-                }catch(IOException | JSchException e){
+                } catch (IOException | JSchException e) {
                     e.printStackTrace();
                 }
             }
@@ -51,11 +57,6 @@ public class SocketHandler extends TextWebSocketHandler {
         thread.start();
 
     }
-
-
-
-
-
 
 
 }
