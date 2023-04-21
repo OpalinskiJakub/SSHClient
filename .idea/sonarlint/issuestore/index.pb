@@ -3,3 +3,17 @@
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 n
 >src/main/java/pl/opalinski/sshclient/SshClientApplication.java,7/a/7a70dc21e9c551ad12203530f042267ae91edf3f
+y
+Isrc/main/java/pl/opalinski/sshclient/Controllers/WebSocketController.java,d/f/dfe2303ff2212611786899d91aee562656933d0b
+j
+:src/main/java/pl/opalinski/sshclient/Entities/Account.java,1/0/108a313622a3a10842c759975457d117b2985755
+x
+Hsrc/main/java/pl/opalinski/sshclient/Repositories/AccountRepository.java,0/6/064bbd4a27a2754a2ee91702a6a99857b2a290cc
+q
+Asrc/main/java/pl/opalinski/sshclient/Services/AccountService.java,3/9/3990923a215d3454f8aeccc734f40d5bd70453d0
+r
+Bsrc/main/java/pl/opalinski/sshclient/Connection/SocketHandler.java,b/3/b3d264c95f6119ebca0ef912654cf9555b92bc1a
+q
+Asrc/main/java/pl/opalinski/sshclient/Connection/SSHConnector.java,6/0/607df0490752081e85c46167da67ac75bf024512
+s
+Csrc/main/java/pl/opalinski/sshclient/Connection/ConnectionData.java,c/8/c8b6164f92061de33db2f3ce0c5779509caaa774
