@@ -23,11 +23,11 @@ Application structure:
 
 ![](images/img.png)
 
-Application works on http://localhost:8080/
+Application works on http://localhost:8080/start
 
-![](images/img_1.png)
-![](images/img_3.png)
 ![](images/img_2.png)
+![](images/img_3.png)
+![](images/img_1.png)
 ![](images/img_4.png)
 
 List of used technologies:<br />
