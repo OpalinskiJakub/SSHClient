@@ -19,7 +19,6 @@ To run tests
 
 Application structure:
 ------------
-	mvn test
 
 ![](images/img.png)
 
